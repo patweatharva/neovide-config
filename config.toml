@@ -1,26 +1,44 @@
-backtraces_path = "/path/to/neovide_backtraces.log" # see below for the default platform specific location
+backtraces_path = "/home/patweatharva/.local/share/neovide"
 fork = false
 frame = "full"
 idle = true
-maximized = false
+maximized = true
 mouse-cursor-icon = "arrow"
-neovim-bin = "/usr/bin/nvim" # in reality found dynamically on $PATH if unset
+neovim-bin = "/opt/nvim/nvim"
 no-multigrid = false
 srgb = false
 tabs = true
 theme = "auto"
 title-hidden = true
-vsync = true
+vsync = false 
 wsl = false
 
 [font]
-normal = [] # Will use the bundled Fira Code Nerd Font by default
-size = 14.0
+size = 12
+
+# Main font set to a heavier weight for increased boldness
+[[font.normal]]
+family = "0xProto Nerd Font Mono"
+style = "SemiBold"     # Try "Bold" for maximum boldness, or "SemiBold" for slightly less
+
+[[font.bold]]
+family = "0xProto Nerd Font Mono"
+style = "Bold"
+
+[[font.italic]]
+family = "0xProto Nerd Font Mono"
+style = "Italic"
+
+[[font.bold_italic]]
+family = "0xProto Nerd Font Mono"
+style = "Bold Italic"
+
+#[font.features]
+#"0xProto Nerd Font Mono" = [ "+ss01", "+ss02" ]  # Enable font features if desired
 
 [box-drawing]
-# "font-glyph", "native" or "selected-native"
 mode = "font-glyph"
 
 [box-drawing.sizes]
-default = [2, 4]  # Thin and thick values respectively, for all sizes
+default = [2, 4]
 
